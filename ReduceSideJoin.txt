@@ -82,7 +82,7 @@ Job job = new Job(conf, "Reduce-side join");
   
  FileOutputFormat.setOutputPath(job, outputPath);
  outputPath.getFileSystem(conf).delete(outputPath);
- conf.set("mapred.textoutputformat.separatorText", ",");
+ //conf.set("mapred.textoutputformat.separator", ",");
  System.exit(job.waitForCompletion(true) ? 0 : 1);
  }
  }
